@@ -4,8 +4,14 @@ import {
   FaFacebook,
   FaFacebookMessenger,
 } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 export const soicals = [
+  {
+    id: crypto.randomUUID(),
+    icon: MdEmail,
+    link: "mailto:programmer.minhajul@gmail.com",
+  },
   {
     id: crypto.randomUUID(),
     icon: FaFacebook,
