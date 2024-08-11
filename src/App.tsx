@@ -1,20 +1,35 @@
+import { useState } from "react";
+
+import Navbar from "./components/nav/Navbar";
+import Hero from "./components/hero/Hero";
+import FeatureHighlights from "./components/common/FeatureHighlights";
+import Shop from "./components/shop/Shop";
+import CoverImage from "./components/common/CoverImage";
+import About from "./components/about/About";
+import FAQ from "./components/faq/FAQ";
+import Contact from "./components/contact/Contact";
+import Footer from "./components/footer/Footer";
+
 const App = () => {
+  const [theme, setTheme] = useState<boolean>(true);
+
   return (
-    <div className="text-center py-20">
-      <h1 className="text-4xl font-fontBold">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </h1>
-      <h2 className="text-2xl font-fontMed">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea dolores ab
-        ad!
-      </h2>
-      <p className="text-base font-fontReg">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur in
-        tenetur quaerat obcaecati? Distinctio quasi quis, enim magnam iusto
-        quibusdam suscipit porro, veniam saepe voluptatem consequuntur alias
-        inventore neque dolorem.{" "}
-      </p>
-    </div>
+    <>
+      <Navbar isDark={theme} onToggle={() => setTheme(!theme)} />
+      <Hero />
+      <section
+        className={`theme-${
+          theme ? "black" : "white"
+        } bg-BG-main text-TX-main pt-6 font-fontReg`}>
+        <FeatureHighlights />
+        <Shop isDark={theme} />
+        <CoverImage />
+        <About />
+        <FAQ isDark={theme} />
+        <Contact isDark={theme} />
+        <Footer isDark={theme} />
+      </section>
+    </>
   );
 };
 
