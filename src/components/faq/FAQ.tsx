@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { DownArrow, UpArrow, IconType } from "../../icons";
 import { FAQ_DATA, FaqType } from "../../constant/mock-data";
 
-const FAQ = ({ isDark }: IconType) => {
+const FAQuestion = ({ isDark }: IconType) => {
   const [isOpen, setIsOpen] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
@@ -66,4 +66,4 @@ const FAQ = ({ isDark }: IconType) => {
   );
 };
 
-export default FAQ;
+export default FAQuestion;

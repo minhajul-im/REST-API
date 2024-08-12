@@ -6,9 +6,10 @@ import FeatureHighlights from "./components/common/FeatureHighlights";
 import Shop from "./components/shop/Shop";
 import CoverImage from "./components/common/CoverImage";
 import About from "./components/about/About";
-import FAQ from "./components/faq/FAQ";
+import FAQuestion from "./components/faq/FAQ";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+import Greet from "./components/Greet";
 
 const App = () => {
   const [theme, setTheme] = useState<boolean>(true);
@@ -25,10 +26,11 @@ const App = () => {
         <Shop isDark={theme} />
         <CoverImage />
         <About />
-        <FAQ isDark={theme} />
+        <FAQuestion isDark={theme} />
         <Contact isDark={theme} />
         <Footer isDark={theme} />
       </section>
+      <Greet name="Minhaj" />
     </>
   );
 };
