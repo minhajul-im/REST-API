@@ -8,3 +8,4 @@ createRoot(document.getElementById("root")!).render(
     <App />
   </StrictMode>
 );
+//https://www.youtube.com/watch?v=viffvWtMTdo&t=1100s
