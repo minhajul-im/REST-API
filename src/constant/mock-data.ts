@@ -8,6 +8,7 @@ import logo from "../assets/images/logo-new.png";
 import video from "../assets/video/video.mp4";
 import contactImg from "../assets/images/contact.webp";
 import thumbnail from "../assets/images/thumbnail.png";
+import coverImg from "../assets/images/beautiful-hand-with-nicout.jpg";
 
 import {
   FacebookIcon,
@@ -19,7 +20,7 @@ import {
   LocationIcon,
 } from "../icons";
 
-export { logo, video, contactImg, thumbnail };
+export { logo, video, contactImg, thumbnail, coverImg };
 
 export type LINK = { title: string; targetId: string };
 
