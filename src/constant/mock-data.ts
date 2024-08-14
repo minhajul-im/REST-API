@@ -20,6 +20,8 @@ import {
   LocationIcon,
 } from "../icons";
 
+export type Children = { children: React.ReactNode | string };
+
 export { logo, video, contactImg, thumbnail, coverImg };
 
 export type LINK = { title: string; targetId: string };
