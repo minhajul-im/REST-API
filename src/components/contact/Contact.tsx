@@ -1,37 +1,29 @@
+import React from "react";
 import { IconType } from "../../icons";
 import Heading from "../common/Heading";
-import { CONTACT, CONTACT_ICONS, contactImg } from "../../constant/mock-data";
+import ContactIcons from "./ContactIcons";
+import { contactImg } from "../../constant/mock-data";
 
 const Contact = ({ isDark }: IconType) => {
+  console.log(isDark);
   return (
-    <section id="contact" className="pb-48 mt-16 container">
-      <Heading>Contact us</Heading>
+    <React.Fragment>
+      <section id="contact" className="pb-48 mt-16 container">
+        <Heading>Contact us</Heading>
 
-      <div className="flex flex-col md:flex-row-reverse md:justify-between md:items-center py-8 tracking-wider">
-        <div className="w-full md:w-1/2 py-10 flex justify-center items-center rounded-lg">
-          <img
-            className="w-full h-full object-cover rounded-lg"
-            src={contactImg}
-            alt="contact"
-          />
-        </div>
-
-        <div className="w-full md:w-1/2 py-10 flex justify-center items-center">
-          <div className="flex gap-6 flex-col">
-            {CONTACT_ICONS.map((ICON, idx: number) => (
-              <div key={idx} className="flex gap-4 items-center">
-                <span>
-                  <ICON isDark={isDark} />
-                </span>
-                <span className="font-fontMed text-base text-TX-main tracking-wide">
-                  {CONTACT[idx]}
-                </span>
-              </div>
-            ))}
+        <div className="flex flex-col md:flex-row-reverse md:justify-between md:items-center py-8 tracking-wider">
+          <div className="w-full md:w-1/2 py-10 flex justify-center items-center rounded-lg">
+            <img
+              className="w-full h-full object-cover rounded-lg"
+              src={contactImg}
+              alt="contact-img"
+            />
           </div>
+
+          <ContactIcons isDark={isDark} />
         </div>
-      </div>
-    </section>
+      </section>
+    </React.Fragment>
   );
 };
 
