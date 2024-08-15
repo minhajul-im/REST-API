@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 import Navbar from "./components/nav/Navbar";
 import Hero from "./components/hero/Hero";
@@ -14,7 +14,7 @@ const App = () => {
   const [theme, setTheme] = useState<boolean>(true);
 
   return (
-    <>
+    <React.Fragment>
       <Navbar isDark={theme} onToggle={() => setTheme(!theme)} />
       <Hero />
       <section
@@ -29,7 +29,7 @@ const App = () => {
         <Contact isDark={theme} />
         <Footer isDark={theme} />
       </section>
-    </>
+    </React.Fragment>
   );
 };
 

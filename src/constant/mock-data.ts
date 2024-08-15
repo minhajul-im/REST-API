@@ -69,7 +69,7 @@ export const FEATURES: FEATURE[] = [
   },
 ];
 
-export const SOCIALS = [FacebookIcon, XIcon, LinkedinIcon, InstagramIcon];
+export const SOCIALS = [FacebookIcon, InstagramIcon, XIcon, LinkedinIcon];
 export const SOCIAL_LINKS = ["#", "#", "#", "#"];
 
 export const CONTACT = [
