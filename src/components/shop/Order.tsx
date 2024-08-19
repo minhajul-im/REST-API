@@ -4,12 +4,12 @@ import CheckboxGroup from "./Checkbox";
 import { ID } from "./ProductDetails";
 import SuccessMessage from "./SuccessMessage";
 import { PRODUCTS, ProductType } from "../../constant/mock-data";
-// import emailjs from '@emailjs/browser';
-// import {
-//   emailServiceId,
-//   emailTemplateId,
-//   emailPublicKey,
-// } from '../../constant/constant';
+import emailjs from "@emailjs/browser";
+import {
+  emailServiceId,
+  emailTemplateId,
+  emailPublicKey,
+} from "../../constant/constant";
 
 type FieldsType = {
   name: string;
@@ -69,29 +69,25 @@ const Order = ({ id }: ID) => {
       `,
     };
 
-    setTimeout(() => {
+    try {
+      const res = await emailjs.send(
+        emailServiceId,
+        emailTemplateId,
+        templateParams,
+        emailPublicKey
+      );
+
+      console.log("Email sent successfully", res);
+
+      if (res.status === 200) {
+        setFields(data);
+        setActive(false);
+        setIsSuccess(true);
+      }
+    } catch (err) {
+      console.log("ERROR FROM EMAIL SEND: ", err);
       setActive(false);
-      setIsSuccess(true);
-
-      console.log("email template", templateParams);
-    }, 3000);
-
-    // try {
-    //   const res = await emailjs.send(
-    //     emailServiceId,
-    //     emailTemplateId,
-    //     templateParams,
-    //     'KzX2FdYujBD5LwJl4'
-    //   );
-
-    //   console.log('Email sent successfully', res);
-
-    //   setFields(data);
-    //   setActive(false);
-    // } catch (err) {
-    //   console.log('ERROR FROM EMAIL SEND: ', err);
-    //   setActive(false);
-    // }
+    }
   };
 
   return (
