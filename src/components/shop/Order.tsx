@@ -5,11 +5,7 @@ import { ID } from "./ProductDetails";
 import CheckboxGroup from "./Checkbox";
 import SuccessMessage from "./SuccessMessage";
 import { PRODUCTS, ProductType } from "../../constant/mock-data";
-import {
-  emailServiceId,
-  emailTemplateId,
-  emailPublicKey,
-} from "../../constant/constant";
+import { emailServiceId, emailTemplateId } from "../../constant/constant";
 
 type FieldsType = {
   name: string;
@@ -74,7 +70,7 @@ const Order = ({ id }: ID) => {
         emailServiceId,
         emailTemplateId,
         templateParams,
-        emailPublicKey
+        "KzX2FdYujBD5LwJl4"
       );
 
       if (res.status === 200) {
