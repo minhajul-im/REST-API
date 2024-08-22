@@ -1,10 +1,10 @@
+import emailjs from "@emailjs/browser";
 import React, { useState } from "react";
 import Input from "../common/Input";
-import CheckboxGroup from "./Checkbox";
 import { ID } from "./ProductDetails";
+import CheckboxGroup from "./Checkbox";
 import SuccessMessage from "./SuccessMessage";
 import { PRODUCTS, ProductType } from "../../constant/mock-data";
-import emailjs from "@emailjs/browser";
 import {
   emailServiceId,
   emailTemplateId,
@@ -76,8 +76,6 @@ const Order = ({ id }: ID) => {
         templateParams,
         emailPublicKey
       );
-
-      console.log("Email sent successfully", res);
 
       if (res.status === 200) {
         setFields(data);

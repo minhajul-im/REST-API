@@ -9,7 +9,6 @@ const FAQuestion = ({ isDark }: IconType) => {
 
   const toggleFAQ = (index: number) => {
     setIsOpen(isOpen === index ? null : index);
-    console.log(FAQ_DATA[index].answer.split(" ").length);
   };
 
   return (
