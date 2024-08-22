@@ -4,8 +4,6 @@ import { IconType } from "../../icons";
 import SocialIcons from "./SocialIcons";
 
 const Footer = ({ isDark }: IconType) => {
-  console.log(isDark);
-
   return (
     <React.Fragment>
       <footer className="footer">

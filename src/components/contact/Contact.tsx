@@ -5,7 +5,6 @@ import ContactIcons from "./ContactIcons";
 import { contactImg } from "../../constant/mock-data";
 
 const Contact = ({ isDark }: IconType) => {
-  console.log(isDark);
   return (
     <React.Fragment>
       <section id="contact" className="pb-48 mt-16 container">

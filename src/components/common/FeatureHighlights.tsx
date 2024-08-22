@@ -3,8 +3,6 @@ import Heading from "./Heading";
 import { FEATURE, FEATURES } from "../../constant/mock-data";
 
 const FeatureHighlights = () => {
-  console.log(FEATURES);
-
   return (
     <React.Fragment>
       <section className="container my-20">
