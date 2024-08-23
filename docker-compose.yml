@@ -7,10 +7,9 @@ services:
       - "5173:5173"
     environment:
       - NODE_ENV=development
-      - VITE_EMAIL_SERVICE_ID=service_72zi0oe
-      - VITE_EMAIL_TEMPLATE_ID=template_s8tmhg8
-      - VITE_EMAIL_PUBLIC_KEY=KzX2FdYujBD5LwJl4
+      - VITE_EMAIL_SERVICE_ID=${VITE_EMAIL_SERVICE_ID}
+      - VITE_EMAIL_TEMPLATE_ID=${VITE_EMAIL_TEMPLATE_ID}
     volumes:
       - .:/app
       - /app/node_modules
-    command: ["pnpm", "run", "dev"]
+    command: ["pnpm", "run", "dev", "--host"]

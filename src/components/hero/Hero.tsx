@@ -1,5 +1,5 @@
 import React from "react";
-// import Title from "./Title";
+import Title from "./Title";
 import { thumbnail, video } from "../../constant/mock-data";
 
 const Hero = () => {
@@ -21,7 +21,7 @@ const Hero = () => {
             poster={thumbnail}></video>
         </div>
 
-        {/* <Title /> */}
+        <Title />
       </section>
     </React.Fragment>
   );
