@@ -9,6 +9,7 @@ import About from "./components/about/About";
 import FAQuestion from "./components/faq/FAQ";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+import WhatsApp from "./components/common/WhatsApp";
 
 const App = () => {
   const [theme, setTheme] = useState<boolean>(true);
@@ -29,6 +30,7 @@ const App = () => {
         <Contact isDark={theme} />
         <Footer isDark={theme} />
       </section>
+      <WhatsApp />
     </React.Fragment>
   );
 };
