@@ -21,9 +21,6 @@ export const DesktopNavbar = () => {
       <NavbarLink path={path} href="/contact">
         Contact
       </NavbarLink>
-      <NavbarLink path={path} href="/faq">
-        FAQ
-      </NavbarLink>
     </ul>
   );
 };
