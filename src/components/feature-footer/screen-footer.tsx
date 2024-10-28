@@ -1,64 +1,51 @@
+import { FeatureBottom } from "./feature-bottom/feature-bottom";
+import { FeatureContact } from "./feature-contact/feature-contact";
 import { SocialFeature } from "./social-feature/social-feature";
-import { OtherLinkFeature } from "./others-link-feature/others-link-feature";
+// import { FeatureSocial } from "./feature-social/feature-social";
 
 export const ScreenFooter = () => {
   return (
-    <footer>
-      <div className="mx-auto max-w-7xl px-4 lg:px-12 p-12 rounded-2xl">
-        <div className="flex flex-col min-[830px]:flex-row items-center justify-between gap-6 pb-10">
-          <a href="#" className="py-1.5">
-            PacknJar
+    <footer className="pt-16 mx-auto px-4 md:px-6 lg:px-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+      <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="sm:col-span-2">
+          <a
+            href=""
+            aria-label="Go home"
+            title="Company"
+            className="inline-flex items-center">
+            <svg
+              className="w-8 text-deep-purple-accent-400"
+              viewBox="0 0 24 24"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
+              stroke="currentColor"
+              fill="none">
+              <rect x="3" y="1" width="7" height="12" />
+              <rect x="3" y="17" width="7" height="6" />
+              <rect x="14" y="1" width="7" height="6" />
+              <rect x="14" y="11" width="7" height="12" />
+            </svg>
+            <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+              Company
+            </span>
           </a>
-          <ul className="flex flex-col sm:flex-row items-center gap-5 sm:gap-12">
-            <li>
-              <a
-                href="jaascript:;"
-                className="text-lg font-normal text-gray-800 transition-all duration-300 hover:text-indigo-600 focus-within:text-indigo-600 focus-within:outline-0">
-                Pagedone
-              </a>
-            </li>
-            <li>
-              <a
-                href="jaascript:;"
-                className="text-lg font-normal text-gray-800 transition-all duration-300 hover:text-indigo-600 focus-within:text-indigo-600 focus-within:outline-0">
-                Products
-              </a>
-            </li>
-            <li>
-              <a
-                href="jaascript:;"
-                className="text-lg font-normal text-gray-800 transition-all duration-300 hover:text-indigo-600 focus-within:text-indigo-600 focus-within:outline-0">
-                Resources
-              </a>
-            </li>
-            <li>
-              <a
-                href="jaascript:;"
-                className="text-lg font-normal text-gray-800 transition-all duration-300 hover:text-indigo-600 focus-within:text-indigo-600 focus-within:outline-0">
-                Blogs
-              </a>
-            </li>
-            <li>
-              <a
-                href="jaascript:;"
-                className="text-lg font-normal text-gray-800 transition-all duration-300 hover:text-indigo-600 focus-within:text-indigo-600 focus-within:outline-0">
-                Support
-              </a>
-            </li>
-          </ul>
+          <div className="mt-6 lg:max-w-sm">
+            <p className="text-sm text-gray-800">
+              Lorem ipsum dolor sit amet consectetur. de omnis iste natus!
+            </p>
+            <p className="text-sm text-gray-800">
+              Sed ut perspiciatis unde omnis iste natus!
+            </p>
+          </div>
         </div>
-      </div>
-      <hr />
-      <div className="mx-auto max-w-7xl px-4 lg:px-12 p-12 rounded-2xl">
-        <div className="pt-7 flex flex-col min-[520px]:flex-row items-center justify-between gap-6">
-          <OtherLinkFeature />
 
-          <SocialFeature />
-        </div>
+        <FeatureContact />
+        <SocialFeature />
       </div>
-      <p className="text-center italic text-sm py-2 text-blue-300">
-        © copyright packnjar 2024
-      </p>
+
+      <FeatureBottom />
     </footer>
   );
 };
