@@ -1,6 +1,6 @@
 export const FeatureContact = () => {
   return (
-    <div className="space-y-2 text-sm">
+    <div className="space-y-2 text-sm text-center md:text-start">
       <p className="text-base font-bold tracking-wide text-gray-900 pb-2">
         Contacts
       </p>

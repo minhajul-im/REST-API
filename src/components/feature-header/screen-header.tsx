@@ -8,9 +8,9 @@ import { DesktopNavbar } from "./desktop-navbar/desktop-navbar";
 export const ScreenHeader = () => {
   return (
     <header className="z-40 sticky top-0 w-full bg-white border-b border-gray-300">
-      <section className="mx-auto px-4 md:px-6 lg:px-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl flex h-14 items-center">
+      <section className="layout-container flex h-14 items-center">
         <nav className="flex items-center space-x-4 lg:space-x-6">
-          <Link href="/" className="w-6 h-6 relative ms-4">
+          <Link href="/" className="w-6 h-6 relative">
             <Image
               src={log}
               alt="logo"
@@ -21,7 +21,7 @@ export const ScreenHeader = () => {
           </Link>
         </nav>
         <nav className="flex flex-1 items-center justify-end space-x-2">
-          <section className="flex items-center mr-4">
+          <section className="flex items-center">
             <DesktopNavbar />
             <ThemeToggle />
             <MobileNavbar />

@@ -65,6 +65,12 @@
   }
 }
 
+@layer components {
+  .layout-container {
+    @apply mx-auto px-4 md:px-6 lg:px-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl;
+  }
+}
+
 /* title style  */
 .title {
   letter-spacing: 2px;
