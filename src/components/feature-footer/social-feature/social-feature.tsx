@@ -4,11 +4,11 @@ import { Icons } from "./all-icon/all-icon";
 
 export const SocialFeature = () => {
   return (
-    <div>
+    <div className="text-center md:text-start">
       <h4 className="text-base font-bold tracking-wide text-gray-900 pb-4">
         Social
       </h4>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 justify-center md:justify-start">
         <LinkItem>{Icons.facebook()}</LinkItem>
         <LinkItem>{Icons.instagram()}</LinkItem>
         <LinkItem>{Icons.youtube()}</LinkItem>

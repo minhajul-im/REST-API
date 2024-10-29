@@ -5,14 +5,14 @@ import { SocialFeature } from "./social-feature/social-feature";
 
 export const ScreenFooter = () => {
   return (
-    <footer className="pt-16 mx-auto px-4 md:px-6 lg:px-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+    <footer className="pt-16 layout-container">
       <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="sm:col-span-2">
+        <div className="sm:col-span-2 flex flex-col justify-center lg:justify-start">
           <a
             href=""
             aria-label="Go home"
             title="Company"
-            className="inline-flex items-center">
+            className="inline-flex items-center justify-center lg:justify-start">
             <svg
               className="w-8 text-deep-purple-accent-400"
               viewBox="0 0 24 24"
@@ -31,7 +31,7 @@ export const ScreenFooter = () => {
               Company
             </span>
           </a>
-          <div className="mt-6 lg:max-w-sm">
+          <div className="mt-6 lg:max-w-sm text-center lg:text-start">
             <p className="text-sm text-gray-800">
               Lorem ipsum dolor sit amet consectetur. de omnis iste natus!
             </p>
