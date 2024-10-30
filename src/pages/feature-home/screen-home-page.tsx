@@ -1,6 +1,7 @@
 import { HeroFeature } from "./feature-hero/feature-hero";
-import { ProductFeature } from "./product-feature/product-feature";
 import { TestFeature } from "./test-feature/test-feature";
+import { ResultFeature } from "./result-feature/result-feature";
+import { ProductFeature } from "./product-feature/product-feature";
 
 export const ScreenHomePage = () => {
   return (
@@ -8,6 +9,7 @@ export const ScreenHomePage = () => {
       <HeroFeature />
       <TestFeature />
       <ProductFeature />
+      <ResultFeature />
     </main>
   );
 };
