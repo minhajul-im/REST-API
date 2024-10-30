@@ -1,72 +1,30 @@
-import { BellRing, Check } from "lucide-react";
-
+import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { buttonVariants } from "@/components/ui/button";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Product } from "../../data";
 
-const notifications = [
-  {
-    title: "Your call has been confirmed.",
-    description: "1 hour ago",
-  },
-  {
-    title: "You have a new message!",
-    description: "1 hour ago",
-  },
-  {
-    title: "Your subscription is expiring soon!",
-    description: "2 hours ago",
-  },
-];
-
-export const SingleProduct = () => {
+export const SingleProduct = ({ img, price, id }: Product) => {
   return (
     <Card className={cn("w-[380px]")}>
-      <CardHeader>
-        <CardTitle>Notifications</CardTitle>
-        <CardDescription>You have 3 unread messages.</CardDescription>
-      </CardHeader>
-      <CardContent className="grid gap-4">
-        <div className=" flex items-center space-x-4 rounded-md border p-4">
-          <BellRing />
-          <div className="flex-1 space-y-1">
-            <p className="text-sm font-medium leading-none">
-              Push Notifications
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Send notifications to device.
-            </p>
-          </div>
-        </div>
-        <div>
-          {notifications.map((notification, index) => (
-            <div
-              key={index}
-              className="mb-4 grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0">
-              <span className="flex h-2 w-2 translate-y-1 rounded-full bg-sky-500" />
-              <div className="space-y-1">
-                <p className="text-sm font-medium leading-none">
-                  {notification.title}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  {notification.description}
-                </p>
-              </div>
-            </div>
-          ))}
+      <CardContent className="pt-6">
+        <div className="max-w-xs h-[320px] relative rounded">
+          <Image
+            fill
+            src={img}
+            alt={id}
+            className="w-full h-full absolute object-cover rounded"
+          />
         </div>
       </CardContent>
-      <CardFooter>
-        <Button className="w-full">
-          <Check /> Mark all as read
-        </Button>
+      <CardFooter className="flex items-center justify-between">
+        <div className="text-base font-medium text-muted-foreground flex items-center gap-2">
+          <span>৳</span> <span>{price}</span>
+        </div>
+        <Link className={cn(buttonVariants({ variant: "outline" }))} href={"/"}>
+          Check Out
+        </Link>
       </CardFooter>
     </Card>
   );

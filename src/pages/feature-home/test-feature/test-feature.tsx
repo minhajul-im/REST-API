@@ -4,9 +4,9 @@ import { SingleTest } from "./single-test/single-test";
 export const TestFeature = () => {
   return (
     <section className="my-28 layout-container">
-      <h1 className="text-4xl font-bold tracking-wide text-muted-foreground py-20 text-center">
+      <h2 className="text-4xl font-bold tracking-wide text-muted-foreground py-20 text-center">
         GET Less Tar / Same Taste with Nic Out
-      </h1>
+      </h2>
 
       <ul className="flex justify-center items-center gap-6 flex-wrap">
         {features.map((item: FeatureType) => (
