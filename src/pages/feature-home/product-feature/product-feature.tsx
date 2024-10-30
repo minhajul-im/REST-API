@@ -9,7 +9,7 @@ export const ProductFeature = () => {
       <h1 className="text-4xl font-bold tracking-wide text-muted-foreground py-20 text-center">
         Our Products
       </h1>
-      <ul className="flex gap-6 flex-wrap justify-center">
+      <ul className="flex gap-6 flex-wrap justify-center items-center transition-all duration-150">
         {products.map((product: Product) => (
           <SingleProduct
             key={product.id}

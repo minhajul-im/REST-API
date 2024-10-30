@@ -8,7 +8,7 @@ export const TestFeature = () => {
         GET Less Tar / Same Taste with Nic Out
       </h2>
 
-      <ul className="flex justify-center items-center gap-6 flex-wrap">
+      <ul className="flex justify-center items-center gap-6 flex-wrap transition-all duration-150">
         {features.map((item: FeatureType) => (
           <SingleTest
             key={item.title}
