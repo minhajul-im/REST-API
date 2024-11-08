@@ -1,14 +1,12 @@
-import Link from "next/link";
-import { MoveRight } from "lucide-react";
-import { SingleProduct } from "./single-product/single-product";
 import { Product, products } from "../data";
+import { Title } from "@/components/common/title";
+import { CustomLink } from "@/components/common/custom-link";
+import { SingleProduct } from "./single-product/single-product";
 
 export const ProductFeature = () => {
   return (
     <section className="layout-container my-32">
-      <h2 className="text-4xl font-bold tracking-wide py-20 text-center uppercase">
-        Our Products
-      </h2>
+      <Title>Our Products</Title>
       <ul className="flex gap-6 flex-wrap justify-center items-center transition-all duration-150">
         {products.map((product: Product) => (
           <SingleProduct
@@ -19,11 +17,7 @@ export const ProductFeature = () => {
           />
         ))}
       </ul>
-      <Link
-        href="/products"
-        className="text-end my-10 flex gap-4 justify-end items-center text-blue-600 font-medium text-xl">
-        <span>See our all products</span> <MoveRight />
-      </Link>
+      <CustomLink link="/products">See our all products</CustomLink>
     </section>
   );
 };
