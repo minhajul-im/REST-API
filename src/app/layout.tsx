@@ -1,7 +1,7 @@
 import "@/common/style/globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-// import { ThemeProvider } from "@/providers/theme-provider";
+import { ThemeProvider } from "@/providers/theme-provider";
 import { ScreenHeader } from "@/components/feature-header/screen-header";
 import { ScreenFooter } from "@/components/feature-footer/screen-footer";
 
@@ -31,11 +31,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* <ThemeProvider> */}
-        <ScreenHeader />
-        {children}
-        <ScreenFooter />
-        {/* </ThemeProvider> */}
+        <ThemeProvider>
+          <ScreenHeader />
+          {children}
+          <ScreenFooter />
+        </ThemeProvider>
       </body>
     </html>
   );

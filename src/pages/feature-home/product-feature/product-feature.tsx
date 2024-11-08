@@ -6,9 +6,9 @@ import { Product, products } from "../data";
 export const ProductFeature = () => {
   return (
     <section className="layout-container my-32">
-      <h1 className="text-4xl font-bold tracking-wide text-muted-foreground py-20 text-center">
+      <h2 className="text-4xl font-bold tracking-wide py-20 text-center uppercase">
         Our Products
-      </h1>
+      </h2>
       <ul className="flex gap-6 flex-wrap justify-center items-center transition-all duration-150">
         {products.map((product: Product) => (
           <SingleProduct

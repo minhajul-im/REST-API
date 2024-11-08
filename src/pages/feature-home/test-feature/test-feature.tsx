@@ -4,7 +4,7 @@ import { SingleTest } from "./single-test/single-test";
 export const TestFeature = () => {
   return (
     <section className="my-28 layout-container">
-      <h2 className="text-4xl font-bold tracking-wide text-muted-foreground py-20 text-center">
+      <h2 className="text-4xl font-bold tracking-wide py-20 text-center uppercase">
         GET Less Tar / Same Taste with Nic Out
       </h2>
 

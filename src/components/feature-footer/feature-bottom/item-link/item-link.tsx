@@ -10,7 +10,7 @@ export const ItemLink = ({ href, children }: ItemProps) => {
     <li>
       <Link
         href={href}
-        className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
+        className="text-sm text-muted-foreground transition-colors duration-300 hover:text-deep-purple-accent-400">
         {children}
       </Link>
     </li>
