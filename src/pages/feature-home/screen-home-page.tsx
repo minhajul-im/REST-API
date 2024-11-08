@@ -3,6 +3,7 @@ import { TestFeature } from "./test-feature/test-feature";
 import { ResultFeature } from "./result-feature/result-feature";
 import { ProductFeature } from "./product-feature/product-feature";
 import { ClientReview } from "./client-review/client-review";
+import { FaqFeature } from "./faq-feature/faq-feature";
 
 export const ScreenHomePage = () => {
   return (
@@ -12,6 +13,7 @@ export const ScreenHomePage = () => {
       <ProductFeature />
       <ResultFeature />
       <ClientReview />
+      <FaqFeature />
     </main>
   );
 };

@@ -1,12 +1,11 @@
 import Image from "next/image";
+import { Title } from "@/components/common/title";
 import img from "@/assets/images/beautiful-hand-with-nicout.jpg";
 
 export const ResultFeature = () => {
   return (
     <section className="layout-container my-24">
-      <h2 className="text-4xl font-bold tracking-wide py-20 text-center uppercase">
-        GET Less Tar / Same Taste with Nic Out
-      </h2>
+      <Title>GET Less Tar / Same Taste with Nic Out</Title>
 
       <p className="text-xl tracking-wide text-muted-foreground max-w-xs md:max-w-xl lg:max-w-2xl mx-auto transition-all duration-150">
         <span className="py-4 block">
