@@ -4,6 +4,7 @@ import { ResultFeature } from "./result-feature/result-feature";
 import { ProductFeature } from "./product-feature/product-feature";
 import { ClientReview } from "./client-review/client-review";
 import { FaqFeature } from "./faq-feature/faq-feature";
+import { WorkFeature } from "./work-feature/work-feature";
 
 export const ScreenHomePage = () => {
   return (
@@ -12,6 +13,7 @@ export const ScreenHomePage = () => {
       <TestFeature />
       <ProductFeature />
       <ResultFeature />
+      <WorkFeature />
       <ClientReview />
       <FaqFeature />
     </main>

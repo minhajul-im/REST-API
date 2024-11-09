@@ -135,3 +135,18 @@ export const faq: FaqType[] = [
     The filter protects dental enamel from penetration of sticky tar, cease formation of a dental strike and helps to keep your smile snow-white. The immediate results of using the tiny device is the disappearance of the tormenting “morning cough” – usually a consequence of smoking over 15 cigarettes per day. After 2 weeks of using this filter the smokers are completely rid of the “morning cough”`,
   },
 ];
+
+export const result = [
+  `Nic-out is a health product that has an international success for smokers, with the highest level of performance in the market.`,
+  `Nic-out is a portable filter in the form of a cigarette fairy that fits on the cigarette and reduces the damage caused by smoking by reducing and absorbing the toxins that are burned while burning the cigarette without compromising the smoker’s taste or consumption habits.`,
+  `Its main function is to help the person who smokes get rid of breathing difficulties and to allow him to start the process of reducing/stopping smoking in a more lenient way!`,
+  `The filter has been tested very carefully and is always in the process of supervising and upgrading the product in order to provide the customer with the maximum value for his money and health!`,
+];
+
+export const work = [
+  `The inner filter allows only small particles of smoke with low molecular weight to pass through, which do not include the molecules of toxins and tar which are considered heavier. This reduces the amount of toxins and nicotine in each inhalation, thus reducing the desire and desire to smoke without damaging the taste of the cigarette`,
+
+  `NIC- Out cigarette filter with a mechanical filtration system that is applied to the cigarette and selectively absorbs the large smoke particles of cigarette tar containing toxic compounds and other carcinogenic substances.`,
+
+  `The action principle of the nic-out filter is based on the gas engine’s gas behavior rules and has been developed in the framework of space technologies.`,
+];
