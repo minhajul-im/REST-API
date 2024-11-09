@@ -29,12 +29,12 @@ export const products: Product[] = [
     img: `https://res.cloudinary.com/dgzms5c9a/image/upload/v1731154986/y6bgjiqad0ils5qbq4cm.jpg`,
   },
   {
-    id: "03",
+    id: "02",
     price: "2100.00",
     img: `https://res.cloudinary.com/dgzms5c9a/image/upload/v1731155022/ijp46go24z89b5pxnttj.jpg`,
   },
   {
-    id: "05",
+    id: "03",
     price: "3300.00",
     img: `https://res.cloudinary.com/dgzms5c9a/image/upload/v1731155058/eqzekweeac9onhf8ntlu.jpg`,
   },
