@@ -1,12 +1,12 @@
-import { Title } from "@/components/common/title";
-import { CustomLink } from "@/components/common/custom-link";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { faq } from "../data";
+import { faq, FaqType } from "../data";
+import { Title } from "@/components/common/title";
+import { CustomLink } from "@/components/common/custom-link";
 
 export const FaqFeature = () => {
   return (
@@ -16,7 +16,7 @@ export const FaqFeature = () => {
         type="single"
         collapsible
         className="max-w-[850px] mx-auto pb-6">
-        {faq.map((item) => (
+        {faq.map((item: FaqType) => (
           <AccordionItem value={item.question} key={item.question}>
             <AccordionTrigger className="text-2xl tracking-wide font-medium">
               {item.question}

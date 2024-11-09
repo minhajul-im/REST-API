@@ -115,7 +115,11 @@ export const reviews: ReviewType[] = [
   },
 ];
 
-export const faq = [
+export type FaqType = {
+  question: string;
+  answer: string;
+};
+export const faq: FaqType[] = [
   {
     question: "What is Nic-Out?",
     answer: `It is a high performance health product. Disposable Cigarette Filter in the form of cigarette holder makes smoking safer or enables smoker to quit easier, if this option should have been chosen. It therefore allows individuals to secure their health for the lowest cost. 
