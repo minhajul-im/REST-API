@@ -1,5 +1,6 @@
 import { work } from "../data";
 import { Title } from "@/components/common/title";
+import { Paragraph } from "@/components/common/paragraph";
 
 export const WorkFeature = () => {
   return (
@@ -7,11 +8,7 @@ export const WorkFeature = () => {
       <Title>How does nic-out work?</Title>
 
       {work.map((item: string, idx: number) => (
-        <p
-          key={idx}
-          className="text-muted-foreground text-xl tracking-wide leading-relaxed max-w-[850px] mx-auto pb-6">
-          {item}
-        </p>
+        <Paragraph key={idx}>{item}</Paragraph>
       ))}
     </section>
   );

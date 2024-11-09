@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { ScreenFeatureFaq } from "@/pages/feature-faq/screen-feature-faq";
+import { ScreenFeatureFaq } from "@/pages/feature-faq/screen-faq-page";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Question",
