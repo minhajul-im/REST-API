@@ -22,7 +22,9 @@ export const SingleProduct = ({ img, price, id }: Product) => {
         <div className="text-base font-medium text-muted-foreground flex items-center gap-2">
           <span>৳</span> <span>{price}</span>
         </div>
-        <Link className={cn(buttonVariants({ variant: "outline" }))} href={"/"}>
+        <Link
+          className={cn(buttonVariants({ variant: "outline" }))}
+          href={`/products/${id}`}>
           Check Out
         </Link>
       </CardFooter>
