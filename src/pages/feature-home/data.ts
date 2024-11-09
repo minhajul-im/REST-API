@@ -114,3 +114,20 @@ export const reviews: ReviewType[] = [
       "These definitely take the nicotine taste out! A little expensive but with coronavirus I do not have to go to the store for them..",
   },
 ];
+
+export const faq = [
+  {
+    question: "What is Nic-Out?",
+    answer: `It is a high performance health product. Disposable Cigarette Filter in the form of cigarette holder makes smoking safer or enables smoker to quit easier, if this option should have been chosen. It therefore allows individuals to secure their health for the lowest cost. 
+    Our Company is proud to offer you this revolutionary product, which could bring the answer to one of the bitterest modern problems, and prove as solution for a Healthier Nation.`,
+  },
+  {
+    question: "How does Nic-Out work?",
+    answer: `The Nic-Out is a cigarette holder with mechanical filtering insert, which selectively absorbs from the smoke large molecules of the tar and other toxic and carcinogenic poly-nuclear aromatic compounds. The principle of action of the Nic-Out filter is based on the laws of behavior of gases in the jet engine and it was developed in a framework of space technologies. This mechanical device permits most low molecular weight species to pass through, although relatively lowering the amount of inhaled nicotine and thus diminishing cravings in those who want to quit.`,
+  },
+  {
+    question: "What are the advantages of Nic-Out?",
+    answer: `Scientific and practical knowledge show that Nic-Out works effectively. It is made from transparent plastic and makes visible concentration of collected tar. This provides important psychological effect in order to build negative image of smoking consequences and to prevent further ruining of public health. Reduction of tar in cigarette smoke has also certain “cosmetic” action. 
+    The filter protects dental enamel from penetration of sticky tar, cease formation of a dental strike and helps to keep your smile snow-white. The immediate results of using the tiny device is the disappearance of the tormenting “morning cough” – usually a consequence of smoking over 15 cigarettes per day. After 2 weeks of using this filter the smokers are completely rid of the “morning cough”`,
+  },
+];
