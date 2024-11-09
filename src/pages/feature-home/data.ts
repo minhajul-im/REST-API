@@ -1,48 +1,42 @@
-import { StaticImageData } from "next/image";
-import img3 from "@/assets/images/lab-test.jpg";
-import img2 from "@/assets/images/save-money.jpg";
-import img1 from "@/assets/images/nicout-filter.jpg";
-import nicOne from "@/assets/images/nic-out1.jpg";
-import nicTwo from "@/assets/images/nic-out2.jpg";
-import nicThree from "@/assets/images/nic-out3.jpg";
-
-export type FeatureType = { title: string; desc: string; img: StaticImageData };
+export type FeatureType = { title: string; desc: string; img: string };
 
 export const features: FeatureType[] = [
   {
     title: "Innovative Design",
     desc: `Our own "Easy Draw" 8-Hole Filter Design is effective and unique.`,
-    img: img1,
+    img: `https://res.cloudinary.com/dgzms5c9a/image/upload/v1731153022/huzxh06litzexrmvproh.jpg`,
   },
   {
     title: "Efficient and Economical",
     desc: `One of the most Economical and Effective Smoking Cessation Methods.`,
-    img: img2,
+    img: `https://res.cloudinary.com/dgzms5c9a/image/upload/v1731153155/u5onjumphmw2ddzbk8k9.jpg`,
   },
   {
     title: "Lab Tested",
     desc: `Nic Out removes 90% of the Tar as shown by Independent Lab Tests (1)`,
-    img: img3,
+    img: `https://res.cloudinary.com/dgzms5c9a/image/upload/v1731153104/rajmlyda57cnf8488ayg.jpg`,
   },
 ];
 
-export type Product = { price: string; id: string; img: StaticImageData };
+export const handNicOutPicture = `https://res.cloudinary.com/dgzms5c9a/image/upload/v1731152624/vbzspkst1lgbrv7jke7l.jpg`;
+
+export type Product = { price: string; id: string; img: string };
 
 export const products: Product[] = [
   {
     id: "01",
     price: "700.00",
-    img: nicOne,
+    img: `https://res.cloudinary.com/dgzms5c9a/image/upload/v1731154986/y6bgjiqad0ils5qbq4cm.jpg`,
   },
   {
     id: "03",
     price: "2100.00",
-    img: nicTwo,
+    img: `https://res.cloudinary.com/dgzms5c9a/image/upload/v1731155022/ijp46go24z89b5pxnttj.jpg`,
   },
   {
     id: "05",
     price: "3300.00",
-    img: nicThree,
+    img: `https://res.cloudinary.com/dgzms5c9a/image/upload/v1731155058/eqzekweeac9onhf8ntlu.jpg`,
   },
 ];
 
