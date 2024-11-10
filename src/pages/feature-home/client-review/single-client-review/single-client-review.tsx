@@ -8,7 +8,7 @@ type ReviewType = {
 
 export const SingleClientReview = ({ name, where, children }: ReviewType) => {
   return (
-    <div className="p-6 rounded-lg mx-auto bg-gray-100 relative">
+    <div className="p-6 rounded-lg mx-auto bg-gray-100 relative shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] shadow-blue-500">
       <div className="flex flex-wrap items-center gap-4">
         <ClientAvatar name={name} />
         <div>

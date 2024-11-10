@@ -6,7 +6,10 @@ import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const SingleTest = ({ img, title, desc }: FeatureType) => {
   return (
-    <Card className={cn("w-[380px]")}>
+    <Card
+      className={cn(
+        "w-[380px] shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] shadow-blue-500"
+      )}>
       <CardHeader>
         <CardTitle>{title}</CardTitle>
       </CardHeader>
