@@ -8,7 +8,10 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
 export const SingleProduct = ({ img, price, id }: Product) => {
   return (
-    <Card className={cn("w-[380px]")}>
+    <Card
+      className={cn(
+        "w-[380px] shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] shadow-blue-500"
+      )}>
       <CardContent className="pt-6">
         <div className="max-w-xs h-[320px] relative rounded">
           {img ? (

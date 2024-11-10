@@ -18,7 +18,7 @@ export const ArticleFeature = ({
   return (
     <article className={`block md:flex py-20 flex-col md:flex-row ${styles}`}>
       <div
-        className={`h-[320px] md:h-[370px] lg:h-[400px] relative w-full md:w-1/2  rounded pb-8 md:pb-0 pr-0 ${
+        className={`h-[320px] md:h-[370px] lg:h-[400px] relative w-full md:w-1/2  rounded pb-8 md:pb-0 pr-0 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] shadow-blue-500 ${
           styles ? "md:pl-4" : "md:pr-4"
         }`}>
         {img ? (
