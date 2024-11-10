@@ -28,7 +28,7 @@ export const FaqFeature = () => {
         ))}
       </Accordion>
 
-      <CustomLink link="/faq">You Can See Question</CustomLink>
+      <CustomLink link="/faq">You Can See More Questions</CustomLink>
     </section>
   );
 };

@@ -7,7 +7,7 @@ export const NavbarLink = ({ children, href, path }: NavbarType) => {
       <Link
         className={`${
           path === href ? "underline text-blue-600" : "text-muted-foreground"
-        } text-2xl font-medium text-center tracking-wide py-2`}
+        } text-2xl font-medium text-center tracking-wide py-2 select-none`}
         href={href}>
         {children}
       </Link>
