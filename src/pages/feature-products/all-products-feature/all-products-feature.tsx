@@ -1,4 +1,4 @@
-import { products, ProductType } from "../data";
+import { products, ProductType } from "@/constant/products";
 import { SingleProduct } from "./single-product/single-product";
 
 export const AllProductFeature = () => {
