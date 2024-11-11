@@ -10,6 +10,7 @@ export const products: ProductType[] = [
     id: "01",
     price: 700,
     title: "Filters for Cigarette Smokers (1 Packs 30 Filters)",
+
     packs: 1,
     img: `https://res.cloudinary.com/dgzms5c9a/image/upload/v1731154986/y6bgjiqad0ils5qbq4cm.jpg`,
   },
@@ -18,6 +19,7 @@ export const products: ProductType[] = [
     price: 2100,
     title: "Smoking Free Tar & Nicotine Disposable NicOut Holders for Smokers",
     packs: 3,
+
     img: `https://res.cloudinary.com/dgzms5c9a/image/upload/v1731155022/ijp46go24z89b5pxnttj.jpg`,
   },
   {
@@ -26,6 +28,7 @@ export const products: ProductType[] = [
     title:
       "Removes The Tar Not The Taste - Reusable Cigarette Filter Tips for Regular & Light Cigarettes",
     packs: 5,
+
     img: `https://res.cloudinary.com/dgzms5c9a/image/upload/v1731155058/eqzekweeac9onhf8ntlu.jpg`,
   },
   {
@@ -33,6 +36,7 @@ export const products: ProductType[] = [
     price: 4100,
     title: "Each filter is good for up to 5 Regular or 10 Light cigarettes.",
     packs: 12,
+
     img: `https://res.cloudinary.com/dgzms5c9a/image/upload/v1731161426/l7thu62s2uhfxwjbpujv.png`,
   },
   {
@@ -40,6 +44,7 @@ export const products: ProductType[] = [
     price: 8000,
     title: "Set of 2 As Seen on TV Nic Out Cigarette Low Nicotine Filter",
     packs: 24,
+
     img: `https://res.cloudinary.com/dgzms5c9a/image/upload/v1731161495/g45ex1yq8xyqphwhx4j4.png`,
   },
   {
@@ -48,6 +53,13 @@ export const products: ProductType[] = [
     title:
       "Premium Cigarette Filters Disposable Cigarette Holder and Tar-Nicotine Filtration",
     packs: 27,
+
     img: `https://res.cloudinary.com/dgzms5c9a/image/upload/v1731162833/zna7i2x6t3pvuojgaksj.png`,
   },
+];
+
+export const description: string[] = [
+  `Removes up to 90% of the Tar but doesn’t change the Taste.`,
+  `Each filter is good for up to 5 Regular or 10 Light cigarettes. Satisfaction Guaranteed`,
+  `Satisfaction Guaranteed - Our cigarette filters are Certified for Quality and Hygiene by the International Standards Organization, the world’s #1 standards organization.`,
 ];
