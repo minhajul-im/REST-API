@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { ProductType } from "../../data";
+import { ProductType } from "@/constant/products";
 import { Skeleton } from "@/components/ui/skeleton";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -10,7 +10,7 @@ export const SingleProduct = ({ img, price, id }: ProductType) => {
   return (
     <Card
       className={cn(
-        "w-[380px] shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] shadow-blue-500"
+        "w-[380px] shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] shadow-blue-500 hover:scale-105 transition-all duration-200"
       )}>
       <CardContent className="pt-6">
         <div className="max-w-xs h-[320px] relative rounded">

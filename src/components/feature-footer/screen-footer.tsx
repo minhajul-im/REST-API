@@ -6,7 +6,7 @@ import { SocialFeature } from "./social-feature/social-feature";
 export const ScreenFooter = () => {
   return (
     <footer className="pt-16 layout-container">
-      <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4 items-center">
         <div className="sm:col-span-2 flex flex-col justify-center lg:justify-start">
           <a
             href=""
