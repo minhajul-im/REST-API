@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { ScreenHeader } from "@/components/feature-header/screen-header";
 import { ScreenFooter } from "@/components/feature-footer/screen-footer";
+import { WhatsAppFeature } from "@/components/feature-whatsapp/feature-whatsapp";
 
 const geistSans = localFont({
   src: "../assets/fonts/GeistVF.woff",
@@ -35,6 +36,7 @@ export default function RootLayout({
           <ScreenHeader />
           {children}
           <ScreenFooter />
+          <WhatsAppFeature />
         </ThemeProvider>
       </body>
     </html>
