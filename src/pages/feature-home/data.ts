@@ -20,26 +20,6 @@ export const features: FeatureType[] = [
 
 export const handNicOutPicture = `https://res.cloudinary.com/dgzms5c9a/image/upload/v1731152624/vbzspkst1lgbrv7jke7l.jpg`;
 
-export type Product = { price: string; id: string; img: string };
-
-export const products: Product[] = [
-  {
-    id: "01",
-    price: "700.00",
-    img: `https://res.cloudinary.com/dgzms5c9a/image/upload/v1731154986/y6bgjiqad0ils5qbq4cm.jpg`,
-  },
-  {
-    id: "02",
-    price: "2100.00",
-    img: `https://res.cloudinary.com/dgzms5c9a/image/upload/v1731155022/ijp46go24z89b5pxnttj.jpg`,
-  },
-  {
-    id: "03",
-    price: "3300.00",
-    img: `https://res.cloudinary.com/dgzms5c9a/image/upload/v1731155058/eqzekweeac9onhf8ntlu.jpg`,
-  },
-];
-
 export type ReviewType = {
   name: string;
   where: string;

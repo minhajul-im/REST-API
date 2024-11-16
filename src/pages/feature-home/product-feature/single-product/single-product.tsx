@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { Product } from "../../data";
 import { Skeleton } from "@/components/ui/skeleton";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { ProductType } from "@/constant/products";
 
-export const SingleProduct = ({ img, price, id }: Product) => {
+export const SingleProduct = ({ img, price, id }: ProductType) => {
   return (
     <Card
       className={cn(
