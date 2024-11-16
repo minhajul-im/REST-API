@@ -16,7 +16,7 @@ export const ScreenSingleProduct = ({ product }: { product: ProductType }) => {
         </ProductInfoFeature>
       </article>
 
-      <OrderInfoFeature />
+      <OrderInfoFeature product={product} />
     </section>
   );
 };

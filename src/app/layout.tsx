@@ -1,7 +1,7 @@
 import "@/style/globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { ThemeProvider } from "@/providers/theme-provider";
+import ThemeProvider from "@/providers/theme-provider";
 import { ScreenHeader } from "@/components/feature-header/screen-header";
 import { ScreenFooter } from "@/components/feature-footer/screen-footer";
 import { WhatsAppFeature } from "@/components/feature-whatsapp/feature-whatsapp";
