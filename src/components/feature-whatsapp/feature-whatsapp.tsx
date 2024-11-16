@@ -54,8 +54,8 @@ export const WhatsAppFeature = () => {
         className="whatsapp-icon z-50"
         src={whatsapp}
         alt="whatsapp"
-        width={40}
-        height={40}
+        sizes="100vh"
+        style={{ width: "55px", height: "55px" }}
       />
     </a>
   );
