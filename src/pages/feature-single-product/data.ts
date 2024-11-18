@@ -1,7 +1,17 @@
+import { OrderType } from "./type";
+
 export type ImageType = {
   id: string;
   name: string;
   img: string;
+};
+
+export const initialValue: OrderType = {
+  name: "",
+  email: "",
+  number: "",
+  address: "",
+  district: "",
 };
 
 export const allImage = [

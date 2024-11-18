@@ -1,10 +1,5 @@
 "use client";
 
-import { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Icons } from "@/components/icons/icons";
-import { Textarea } from "@/components/ui/textarea";
 import {
   Select,
   SelectContent,
@@ -12,27 +7,22 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { OrderDetails } from "../order-details/order-details";
+import { useState } from "react";
+import { OrderType } from "../type";
+import { initialValue } from "../data";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Icons } from "@/components/icons/icons";
 import { ProductType } from "@/constant/products";
-
-export type ContactType = {
-  name: string;
-  email: string;
-  number: string;
-  address: string;
-  district: string;
-};
-
-const initialValue: ContactType = {
-  name: "",
-  email: "",
-  number: "",
-  address: "",
-  district: "",
-};
+import { Textarea } from "@/components/ui/textarea";
+import { OrderDetails } from "./order-details/order-details";
+import {
+  // sendEmailCustomer,
+  sendEmailManager,
+} from "../server-action/server-action";
 
 export const OrderInfoFeature = ({ product }: { product: ProductType }) => {
-  const [inputs, setInputs] = useState<ContactType>(initialValue);
+  const [inputs, setInputs] = useState<OrderType>(initialValue);
   const [isLoading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -40,13 +30,14 @@ export const OrderInfoFeature = ({ product }: { product: ProductType }) => {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setInputs((prev: ContactType) => ({
+    setInputs((prev: OrderType) => ({
       ...prev,
       [name]: value,
     }));
   };
+
   const handleSelectChange = (value: string) => {
-    setInputs((prev: ContactType) => ({
+    setInputs((prev: OrderType) => ({
       ...prev,
       district: value,
     }));
@@ -66,12 +57,13 @@ export const OrderInfoFeature = ({ product }: { product: ProductType }) => {
     }
 
     try {
-      //   const { success } = await sendEmail(inputs);
-      console.log(inputs);
-
-      //   if (success) {
-      //     setInputs(initialValue);
-      //   }
+      if (inputs.email) {
+        const manager = await sendEmailManager(inputs);
+        // const customer = await sendEmailCustomer(inputs);
+        if (manager.success) {
+          setInputs(initialValue);
+        }
+      }
     } catch (error) {
       setError(`Failed to send message. Please try again. ${error}`);
     } finally {
@@ -81,7 +73,7 @@ export const OrderInfoFeature = ({ product }: { product: ProductType }) => {
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  const checkInput = (data: ContactType): string | null => {
+  const checkInput = (data: OrderType): string | null => {
     const name = data.name.trim();
     const email = data.email.trim();
     const number = data.number.trim();
@@ -127,7 +119,7 @@ export const OrderInfoFeature = ({ product }: { product: ProductType }) => {
           <Input
             name="email"
             type="email"
-            placeholder="Email..."
+            placeholder="*Email..."
             value={inputs.email}
             onChange={handleChange}
           />
@@ -176,6 +168,7 @@ export const OrderInfoFeature = ({ product }: { product: ProductType }) => {
           </Button>
         </div>
       </form>
+
       <section className="w-full md:w-1/2">
         <OrderDetails product={product} deliveryPlace={inputs.district} />
       </section>
