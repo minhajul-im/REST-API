@@ -1,12 +1,15 @@
 .whatsapp-link {
   position: fixed;
-  bottom: -80px;
+  /* bottom: -80px; */
   right: 40px;
   z-index: 50;
   transition: bottom 0.3s ease-in-out;
 }
 
-.whatsapp-link.visible {
+/* .whatsapp-link.visible {
+  bottom: 40px;
+} */
+.whatsapp-link {
   bottom: 40px;
 }
 

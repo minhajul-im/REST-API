@@ -2,7 +2,7 @@
 
 import "./whatsapp.css";
 import Image from "next/image";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import whatsapp from "@/assets/images/whatsapp.png";
 
 export const WhatsAppFeature = () => {
@@ -11,34 +11,34 @@ export const WhatsAppFeature = () => {
   const encodingMgs = "Hey there, How's going?";
   const url = `${baseUrl}?phone=${phone}&text=${encodingMgs}&type=phone_number&app_absent=0`;
 
-  useEffect(() => {
-    const el = document.querySelector(".whatsapp-link");
+  // useEffect(() => {
+  //   const el = document.querySelector(".whatsapp-link");
 
-    const handleScroll = () => {
-      if (window.scrollY < 100) {
-        el?.classList.add("visible");
-      } else {
-        el?.classList.remove("visible");
-      }
-    };
+  //   const handleScroll = () => {
+  //     if (window.scrollY < 10) {
+  //       el?.classList.add("visible");
+  //     } else {
+  //       el?.classList.remove("visible");
+  //     }
+  //   };
 
-    const checkScroll = () => {
-      const height = document.documentElement.scrollHeight;
-      const clientHeight = document.documentElement.clientHeight;
+  //   const checkScroll = () => {
+  //     const height = document.documentElement.scrollHeight;
+  //     const clientHeight = document.documentElement.clientHeight;
 
-      if (height > clientHeight) {
-        window.addEventListener("scroll", handleScroll);
-      } else {
-        el?.classList.add("visible");
-      }
-    };
+  //     if (height > clientHeight) {
+  //       window.addEventListener("scroll", handleScroll);
+  //     } else {
+  //       el?.classList.add("visible");
+  //     }
+  //   };
 
-    checkScroll();
+  //   checkScroll();
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
     <a
