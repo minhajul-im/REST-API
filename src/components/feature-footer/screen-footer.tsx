@@ -1,7 +1,6 @@
 import { FeatureBottom } from "./feature-bottom/feature-bottom";
-import { FeatureContact } from "./feature-contact/feature-contact";
 import { SocialFeature } from "./social-feature/social-feature";
-// import { FeatureSocial } from "./feature-social/feature-social";
+import { FeatureContact } from "./feature-contact/feature-contact";
 
 export const ScreenFooter = () => {
   return (
