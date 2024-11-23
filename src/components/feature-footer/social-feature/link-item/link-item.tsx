@@ -1,6 +1,6 @@
 type LinkType = {
-  children: React.ReactNode;
   link?: string;
+  children: React.ReactNode;
 };
 
 export const LinkItem = ({ children, link = "#" }: LinkType) => {

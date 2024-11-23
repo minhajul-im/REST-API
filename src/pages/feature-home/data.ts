@@ -93,6 +93,7 @@ export type FaqType = {
   question: string;
   answer: string;
 };
+
 export const faq: FaqType[] = [
   {
     question: "What is Nic-Out?",

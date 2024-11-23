@@ -8,6 +8,7 @@ export const ProductFeature = () => {
   return (
     <section className="layout-container my-32">
       <Title>Our Products</Title>
+
       <ul className="flex gap-6 flex-wrap justify-center items-center transition-all duration-150">
         {sliceProducts.map((product: ProductType) => (
           <SingleProduct

@@ -12,9 +12,9 @@ type DemoType = {
   open: boolean;
   title: string;
   linkText: string;
-  children: React.ReactNode;
   onOpen: () => void;
   onClose: () => void;
+  children: React.ReactNode;
 };
 
 export const CustomDialog = ({
@@ -37,6 +37,7 @@ export const CustomDialog = ({
           {linkText}
         </Button>
       </DialogTrigger>
+
       <DialogContent className="max-w-sm md:max-w-xl lg:max-w-2xl">
         <DialogHeader>
           <DialogTitle className="text-center my-6">{title}</DialogTitle>

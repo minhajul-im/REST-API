@@ -97,8 +97,6 @@ export const faqs: FaqType[] = [
   {
     question:
       "If I-m not satisfied with the results from Nic-Out, can I get a refund?",
-    answer: `Yes, Nic-Out has a 100% RISK FREE guarantee. If for any reason you are unsatisfied with our product, simply return it with a written request within 30 days and a full refund less shipping and handling will be issued promptly.
-      The best of all is to quit smoking.
-      The next best thing is to use Nic-Out.`,
+    answer: `Yes, Nic-Out has a 100% RISK FREE guarantee. If for any reason you are unsatisfied with our product, simply return it with a written request within 30 days and a full refund less shipping and handling will be issued promptly. The best of all is to quit smoking. The next best thing is to use Nic-Out.`,
   },
 ];

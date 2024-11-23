@@ -26,12 +26,12 @@ export const SingleProduct = ({ img, price, id }: ProductType) => {
           )}
         </div>
       </CardContent>
+
       <CardFooter className="flex items-center justify-between">
         <div className="text-base font-medium text-muted-foreground flex items-center gap-2">
           <span>৳</span>
           <span>
-            {price}
-            {".00"}
+            {price} {".00"}
           </span>
         </div>
         <Link

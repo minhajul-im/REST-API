@@ -20,9 +20,6 @@ export const sendEmail = async (data: ContactType) => {
         message: data.message,
       }),
     });
-
-    console.log(result);
-
     return { success: true, data: result };
   } catch (error) {
     return { success: false, error: error };

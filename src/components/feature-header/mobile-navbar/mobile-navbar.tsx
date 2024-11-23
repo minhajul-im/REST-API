@@ -19,6 +19,7 @@ import { NavbarLink } from "./navbar-link/navbar-link";
 export const MobileNavbar = () => {
   const [isOpen, setOpen] = useState<boolean>(false);
   const pathName = usePathname();
+
   const path = pathName as string;
 
   return (
@@ -29,6 +30,7 @@ export const MobileNavbar = () => {
             <Menu className="w-6 h-6" />
           </Button>
         </SheetTrigger>
+
         <SheetContent className="fixed inset-0 z-50" side="top">
           <SheetHeader>
             <div className="flex justify-between items-center">
@@ -46,6 +48,7 @@ export const MobileNavbar = () => {
               this is pack n jar site
             </SheetDescription>
           </SheetHeader>
+
           <ul className="flex items-center justify-center gap-4 flex-col mt-28">
             <NavbarLink path={path} href="/">
               Home
@@ -63,6 +66,7 @@ export const MobileNavbar = () => {
               FAQ
             </NavbarLink>
           </ul>
+
           <SheetFooter>
             <SheetClose asChild>
               <Button className="hidden" type="submit">

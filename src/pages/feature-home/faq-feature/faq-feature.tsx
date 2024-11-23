@@ -12,6 +12,7 @@ export const FaqFeature = () => {
   return (
     <section className="layout-container my-32">
       <Title> frequently asked question</Title>
+
       <Accordion
         type="single"
         collapsible

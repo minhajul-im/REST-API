@@ -5,7 +5,7 @@ import { SingleTest } from "./single-test/single-test";
 export const TestFeature = () => {
   return (
     <section className="my-28 layout-container">
-      <Title>GET Less Tar / Same Taste with Nic Out</Title>
+      <Title>GET Less Tar / Same Taste with Nic Out!</Title>
 
       <ul className="flex justify-center items-center gap-6 flex-wrap transition-all duration-150">
         {features.map((item: FeatureType) => (

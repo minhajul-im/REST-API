@@ -1,6 +1,6 @@
 .whatsapp-link {
-  position: fixed;
   /* bottom: -80px; */
+  position: fixed;
   right: 40px;
   z-index: 50;
   transition: bottom 0.3s ease-in-out;

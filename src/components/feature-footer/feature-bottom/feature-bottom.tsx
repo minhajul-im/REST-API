@@ -5,13 +5,13 @@ import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { buttonVariants } from "@/components/ui/button";
-import { CustomDialog } from "@/components/common/custom-dialog";
 import { Paragraph } from "@/components/common/paragraph";
 import { PRIVACY_POLICY, TERMS_CONDITION } from "../data";
+import { CustomDialog } from "@/components/common/custom-dialog";
 
 export const FeatureBottom = () => {
   const path = usePathname();
-  const [open, setOpen] = useState("");
+  const [open, setOpen] = useState<string>("");
 
   return (
     <section className="flex justify-center items-center flex-col-reverse md:flex-row md:justify-between py-5 border-t">

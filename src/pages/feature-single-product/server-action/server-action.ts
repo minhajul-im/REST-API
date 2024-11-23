@@ -1,12 +1,11 @@
 "use server";
-
 import { Resend } from "resend";
 import { OrderType } from "../type";
-import { emailPrivetKey } from "@/constant";
 import {
   CustomerEmailTemplate,
   ManagerEmailTemplate,
 } from "./email-template/email-template";
+import { emailPrivetKey } from "@/constant";
 
 const resend = new Resend(emailPrivetKey);
 
@@ -24,9 +23,6 @@ export const sendEmailManager = async (data: OrderType) => {
         district: data.district,
       }),
     });
-
-    console.log(result);
-
     return { success: true, data: result };
   } catch (error) {
     return { success: false, error: error };

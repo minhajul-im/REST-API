@@ -32,10 +32,13 @@ export const ScreenFooter = () => {
           </a>
           <div className="mt-6 lg:max-w-sm text-center lg:text-start text-muted-foreground">
             <p className="text-sm">
-              Lorem ipsum dolor sit amet consectetur. de omnis iste natus!
+              At PacknJar, we provide high-quality cigarette filters designed to
+              reduce tar and nicotine, helping smokers enjoy a smoother, less
+              harmful experience.
             </p>
             <p className="text-sm">
-              Sed ut perspiciatis unde omnis iste natus!
+              Our filters are available in convenient packs for easy use and
+              disposal.
             </p>
           </div>
         </div>

@@ -1,9 +1,9 @@
 import * as React from "react";
 import {
   Carousel,
-  CarouselContent,
   CarouselItem,
   CarouselNext,
+  CarouselContent,
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { reviews, ReviewType } from "../data";
