@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_BASE_URL: ${NEXT_BASE_URL}
+        NEXT_EMAIL_PRIVATE_KEY: ${NEXT_EMAIL_PRIVATE_KEY}
+    image: packnjar-app
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_BASE_URL: ${NEXT_BASE_URL}
+      NEXT_EMAIL_PRIVATE_KEY: ${NEXT_EMAIL_PRIVATE_KEY}
