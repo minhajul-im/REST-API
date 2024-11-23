@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { ScreenContactPage } from "@/pages/feature-contact/screen-contact-page";
+import { ScreenContactPage } from "@/module/feature-contact/screen-contact-page";
 
 export const metadata: Metadata = {
   title: "Contact us",

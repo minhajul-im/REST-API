@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { ScreenProductsPage } from "@/pages/feature-products/screen-product-page";
+import { ScreenProductsPage } from "@/module/feature-products/screen-product-page";
 
 export const metadata: Metadata = {
   title: "Our All NicOut Products",

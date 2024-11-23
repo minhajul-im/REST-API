@@ -37,20 +37,15 @@ export const WhatsAppFeature = () => {
   // }, []);
 
   return (
-    <a
-      href={url}
-      className="whatsapp-link relative"
-      target="_blank"
-      rel="noreferrer noopener">
+    <a href={url} className="whatsapp-link" target="_blank">
       <span className="absolute top-2 left-2 -z-50 size-10">
-        <span className="flex justify-center items-center size-full animate-ping rounded-full bg-green-500/75"></span>
+        <span className="flex justify-center items-center size-full animate-ping rounded-full bg-green-500/75" />
       </span>
 
       <Image
         className="whatsapp-icon z-50"
         src={whatsapp}
         alt="whatsapp"
-        sizes="100vh"
         style={{ width: "55px", height: "55px" }}
       />
     </a>

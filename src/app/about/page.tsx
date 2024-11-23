@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { ScreenAboutPage } from "@/pages/feature-about/screen-about-page";
+import { ScreenAboutPage } from "@/module/feature-about/screen-about-page";
 
 export const metadata: Metadata = {
   title: "About of Nic Out",
