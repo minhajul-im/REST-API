@@ -27,7 +27,7 @@ export const ScreenFooter = () => {
               <rect x="14" y="11" width="7" height="12" />
             </svg>
             <span className="ml-2 text-xl font-bold tracking-wide uppercase">
-              Company
+              Pack n Jar
             </span>
           </a>
           <div className="mt-6 lg:max-w-sm text-center lg:text-start text-muted-foreground">
