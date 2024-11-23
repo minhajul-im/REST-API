@@ -27,15 +27,22 @@ export const OrderDetails = ({ deliveryPlace, product }: OrderType) => {
         {product.packs} {product.packs > 1 ? "Packs " : "Pack "} and{" "}
         {product.packs * 30} Filters
       </h6>
+
       <div className="flex justify-between items-center">
-        <p>Product Price</p> <p>{product.price}.00</p>
+        <span>Product Price</span>
+        <span>{product.price}.00</span>
       </div>
+
       <div className="flex justify-between items-center">
-        <p>Delivery Charge</p> <p>{deliveryCharge}.00</p>
+        <span>Delivery Charge</span>
+        <span>{deliveryCharge}.00</span>
       </div>
+
       <hr />
+
       <div className="flex justify-between items-center">
-        <p>Total Taka</p> <p>{product.price + deliveryCharge}.00</p>
+        <span>Total Taka</span>
+        <span>{product.price + deliveryCharge}.00</span>
       </div>
     </div>
   );

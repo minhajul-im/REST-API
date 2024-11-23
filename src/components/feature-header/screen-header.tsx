@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import log from "@/assets/images/logo-new.png";
+import log from "@/assets/images/logo.png";
 import { ThemeToggle } from "./theme-toggle/theme-toggle";
 import { MobileNavbar } from "./mobile-navbar/mobile-navbar";
 import { DesktopNavbar } from "./desktop-navbar/desktop-navbar";
@@ -20,6 +20,7 @@ export const ScreenHeader = () => {
             />
           </Link>
         </nav>
+
         <nav className="flex flex-1 items-center justify-end space-x-2">
           <section className="flex items-center">
             <DesktopNavbar />

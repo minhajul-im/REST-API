@@ -11,6 +11,7 @@ export const ScreenSingleProduct = ({ product }: { product: ProductType }) => {
 
       <article className="block md:flex py-20 flex-col md:flex-row">
         <ProductImagesFeature imgUrl={product?.img} />
+
         <ProductInfoFeature packs={product.packs} price={product.price}>
           {product.title as string}
         </ProductInfoFeature>

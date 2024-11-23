@@ -82,22 +82,18 @@ export const OrderInfoFeature = ({ product }: { product: ProductType }) => {
     if (!name) {
       return "Please provide your name.";
     }
-
     if (!email) {
       return "Please provide your email.";
     }
     if (!number) {
       return "Please provide your number.";
     }
-
     if (!emailRegex.test(email)) {
       return "Please provide a valid email address.";
     }
-
     if (!address) {
       return "Please provide a message.";
     }
-
     return null;
   };
 

@@ -4,9 +4,9 @@ import { useState } from "react";
 import { ContactType } from "../type";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Icons } from "@/components/icons/icons";
 import { Textarea } from "@/components/ui/textarea";
 import { sendEmail } from "../server-action/server-action";
-import { Icons } from "@/components/icons/icons";
 
 const initialValue: ContactType = {
   name: "",
@@ -45,7 +45,6 @@ export const ContactFrom = () => {
 
     try {
       const { success } = await sendEmail(inputs);
-
       if (success) {
         setInputs(initialValue);
       }

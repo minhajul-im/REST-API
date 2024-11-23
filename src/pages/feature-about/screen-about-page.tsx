@@ -15,12 +15,14 @@ export const ScreenAboutPage = () => {
       <ArticleFeature img={aboutOne.img} paragraph={aboutOne.paragraph}>
         {aboutOne.title}
       </ArticleFeature>
+
       <ArticleFeature
         styles="md:flex-row-reverse"
         img={aboutTwo.img}
         paragraph={aboutTwo.paragraph}>
         {aboutTwo.title}
       </ArticleFeature>
+
       <ArticleFeature img={aboutThree.img} paragraph={aboutThree.paragraph}>
         {aboutThree.title}
       </ArticleFeature>

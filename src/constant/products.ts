@@ -5,6 +5,7 @@ export type ProductType = {
   packs: number;
   img: string;
 };
+
 export const products: ProductType[] = [
   {
     id: "01",

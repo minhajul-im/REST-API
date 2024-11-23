@@ -22,6 +22,7 @@ export const aboutTwo = {
   More U.S. Men (23.4%) smoke than Women (18.5%).
   `,
 };
+
 export const aboutThree = {
   title: "GUARANTEED SAFE & EFFECTIVE",
   img: `https://res.cloudinary.com/dgzms5c9a/image/upload/v1731172904/f3v7w2hqxudj5nsybagt.jpg`,

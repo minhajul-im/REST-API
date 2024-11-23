@@ -9,7 +9,7 @@ export const ScreenContactPage = () => {
         <div className="absolute -bottom-6 -left-6 w-20 h-20 rounded-full bg-blue-500" />
         <div className="absolute -top-6 -right-6 w-20 h-20 rounded-full bg-blue-500" />
 
-        <Title>Contact Us</Title>
+        <Title>Contact us</Title>
 
         <div className="grid md:grid-cols-2 gap-8 py-8 px-6">
           <ImageContact />

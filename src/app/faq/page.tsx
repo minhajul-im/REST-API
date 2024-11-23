@@ -13,13 +13,13 @@ Where and how is it made?
 Answer: Nic-Out is developed in Israel and manufactured overseas using Grade-A plastic, the same used for baby bottles, with a patented technology.
 
 What are the advantages of Nic-Out?
-Answer: It reduces tar in smoke, helps with dental protection, eliminates morning cough, and promotes a healthier smoking experience.
+Answer: It reduces tar in smoke, helps with dental protection, eliminates morning cough, and promotes a healthier smoking experience!
 
 Does Nic-Out come in one size or can I get it for slim cigarettes?
 Answer: Nic-Out filters are available for both regular and slim-sized cigarettes.
 
 What is the Packing of Nic-Out?
-Answer: Nic-Out filters are packed in cigarette-type boxes with 30 filters for regular-sized cigarettes or 25 for slim cigarettes, with 20 packs per carton.`,
+Answer: Nic-Out filters are packed in cigarette-type boxes with 30 filters for regular-sized cigarettes or 25 for slim cigarettes, with 20 packs per carton!`,
 };
 
 export default function FaqPage() {

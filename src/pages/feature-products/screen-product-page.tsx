@@ -5,6 +5,7 @@ export const ScreenProductsPage = () => {
   return (
     <section className="layout-container mb-20">
       <Title>Our Nic Out Products</Title>
+
       <AllProductFeature />
     </section>
   );

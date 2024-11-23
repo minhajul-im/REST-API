@@ -7,6 +7,7 @@ export const DesktopNavbar = () => {
   const pathName = usePathname();
 
   const path = pathName as string;
+
   return (
     <ul className="hidden md:flex items-center gap-8">
       <NavbarLink path={path} href="/">

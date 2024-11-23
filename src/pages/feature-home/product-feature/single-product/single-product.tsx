@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { ProductType } from "@/constant/products";
 import { Skeleton } from "@/components/ui/skeleton";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { ProductType } from "@/constant/products";
 
 export const SingleProduct = ({ img, price, id }: ProductType) => {
   return (

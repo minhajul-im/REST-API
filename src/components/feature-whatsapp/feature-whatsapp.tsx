@@ -1,16 +1,12 @@
 "use client";
 
 import "./whatsapp.css";
+import { url } from "./data";
 import Image from "next/image";
 // import { useEffect } from "react";
 import whatsapp from "@/assets/images/whatsapp.png";
 
 export const WhatsAppFeature = () => {
-  const phone = "01616292567";
-  const baseUrl = "https://api.whatsapp.com/send/";
-  const encodingMgs = "Hey there, How's going?";
-  const url = `${baseUrl}?phone=${phone}&text=${encodingMgs}&type=phone_number&app_absent=0`;
-
   // useEffect(() => {
   //   const el = document.querySelector(".whatsapp-link");
 
