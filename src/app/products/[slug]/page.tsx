@@ -2,7 +2,7 @@ import { baseUrl } from "@/constant";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { description, products, ProductType } from "@/constant/products";
-import { ScreenSingleProduct } from "@/pages/feature-single-product/screen-single-product";
+import { ScreenSingleProduct } from "@/module/feature-single-product/screen-single-product";
 
 type Props = {
   params: Promise<{ slug: string }>;

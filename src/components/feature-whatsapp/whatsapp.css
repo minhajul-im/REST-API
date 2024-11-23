@@ -1,7 +1,7 @@
 .whatsapp-link {
-  /* bottom: -80px; */
-  position: fixed;
+  bottom: 40px;
   right: 40px;
+  position: fixed;
   z-index: 50;
   transition: bottom 0.3s ease-in-out;
 }
@@ -9,9 +9,6 @@
 /* .whatsapp-link.visible {
   bottom: 40px;
 } */
-.whatsapp-link {
-  bottom: 40px;
-}
 
 .whatsapp-icon {
   width: 55px;
