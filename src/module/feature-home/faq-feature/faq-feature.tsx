@@ -19,7 +19,7 @@ export const FaqFeature = () => {
         className="max-w-[850px] mx-auto pb-6">
         {faq.map((item: FaqType) => (
           <AccordionItem value={item.question} key={item.question}>
-            <AccordionTrigger className="text-2xl tracking-wide font-medium">
+            <AccordionTrigger className="text-2xl text-start tracking-wide font-medium">
               {item.question}
             </AccordionTrigger>
             <AccordionContent className="text-muted-foreground text-xl tracking-wide leading-relaxed">
