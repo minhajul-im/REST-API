@@ -12,7 +12,11 @@ export type Contact = {
 };
 
 export const contact: Contact = {
-  phone: "+880 14 ** 00 ** **",
-  email: "info@packnjar.com",
+  phone: "+880 161 6292 567",
+  email: "packnjar@gmail.com",
   address: "Uttara, Dhaka-1230",
+};
+
+export const links = {
+  facebook: `https://www.facebook.com/PacknJar`,
 };
