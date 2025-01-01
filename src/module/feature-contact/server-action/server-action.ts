@@ -11,7 +11,7 @@ export const sendEmail = async (data: ContactType) => {
   try {
     const result = await resend.emails.send({
       from: `${data.name} <onboarding@resend.dev>`,
-      to: ["minhajul.cpp@gmail.com"],
+      to: ["packnjar@gmail.com"],
       subject: `Inquiry About Our Leather and Jute Products from ${data.name}!`,
       react: EmailTemplate({
         name: data.name,
