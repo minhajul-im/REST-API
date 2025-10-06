@@ -1,12 +1,8 @@
-# Pack-n-Jar
+# React + Vite
 
-Pack-n-Jar is a Next.js project that includes several modern React components and integrates with TailwindCSS for styling. This project also utilizes Radix UI components and various other utilities to create a sleek, responsive user interface.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
+Currently, two official plugins are available:
 
-- **Next.js** for server-side rendering and static site generation.
-- **Radix UI components** for accessible and customizable UI elements.
-- **Tailwind CSS** for utility-first styling.
-- **Resend** for email integration.
-- **TypeScript** for type safety and better developer experience.
-- **ESLint** for linting and code quality enforcement.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

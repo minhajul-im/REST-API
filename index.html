@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="facebook-domain-verification" content="ub81c2ljec13oel4meo6we6ew6ohpc"/>
+    <meta charset="UTF-8" />
+    <link rel="icon" id="dynamic-favicon" type="image/svg+xml" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ummahsign</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', async function () {
+        try {
+          // ✅ Fetch general data (for logo)
+          const generalResponse = await fetch('https://backend.ummahsign.com/api/general-data');
+          const generalData = await generalResponse.json();
+          const faviconUrl = generalData.generalData.logo_url;
+          document.getElementById('dynamic-favicon').href = faviconUrl;
+
+          // ✅ Fetch GTM ID from another API
+          const gtmResponse = await fetch('https://backend.ummahsign.com/api/gtm');
+          const gtmData = await gtmResponse.json();
+          const gtmId = gtmData.gtm?.gtm_id || 'GTM-XXXXXXX'; // fallback
+
+          // ✅ Inject GTM script
+          const gtmScript = document.createElement('script');
+          gtmScript.innerHTML = `
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','${gtmId}');
+          `;
+          document.head.appendChild(gtmScript);
+
+          // ✅ Add GTM <noscript> iframe
+          const noscript = document.createElement('noscript');
+          noscript.innerHTML = `
+            <iframe src="https://www.googletagmanager.com/ns.html?id=${gtmId}"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+          `;
+          document.body.prepend(noscript);
+
+        } catch (error) {
+          console.error('Error initializing favicon or GTM:', error);
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
