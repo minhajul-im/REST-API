@@ -1,4 +1,4 @@
-import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Inject, Injectable } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import { firstValueFrom } from 'rxjs';
 import { plainToInstance } from 'class-transformer';
@@ -16,12 +16,17 @@ import {
   OperationResponseDtoWithoutData,
 } from 'src/common/dto/operation-response.dto';
 import { CreatePostDto, GetPostDto, UpdatePostDto } from './posts.dto';
+import { CACHE_MANAGER } from '@nestjs/cache-manager';
+import type { Cache } from 'cache-manager';
 
 @Injectable()
 export class PostsService {
   private readonly baseUrl = 'https://jsonplaceholder.typicode.com/posts';
 
-  constructor(private readonly httpService: HttpService) {}
+  constructor(
+    private readonly httpService: HttpService,
+    @Inject(CACHE_MANAGER) private cacheManager: Cache,
+  ) {}
 
   async create(
     createPostDto: CreatePostDto,
@@ -62,6 +67,15 @@ export class PostsService {
     page: number,
     limit: number,
   ): Promise<PaginatedResponseDto<GetPostDto>> {
+    const cacheKey = `posts:page:${page}:limit:${limit}`;
+
+    const cached =
+      await this.cacheManager.get<PaginatedResponseDto<GetPostDto>>(cacheKey);
+    if (cached) {
+      console.log('Cache HIT for', cacheKey);
+      return cached;
+    }
+
     try {
       const { data } = await firstValueFrom(
         this.httpService.get<GetPostDto[]>(this.baseUrl),
@@ -79,13 +93,13 @@ export class PostsService {
       });
 
       const validationResults = await Promise.all(
-        postInstances?.map((post) => validate(post)),
+        postInstances.map((post) => validate(post)),
       );
 
       const validatedPosts: GetPostDto[] = [];
       const errors: string[] = [];
 
-      validationResults?.forEach((errs, idx) => {
+      validationResults.forEach((errs, idx) => {
         if (errs.length === 0) {
           validatedPosts.push(postInstances[idx]);
         } else {
@@ -93,23 +107,28 @@ export class PostsService {
         }
       });
 
-      if (validatedPosts?.length === 0) {
+      if (validatedPosts.length === 0) {
         throw new HttpException(
           'No valid posts after validation',
           HttpStatus.INTERNAL_SERVER_ERROR,
         );
       }
 
-      if (errors?.length > 0) {
+      if (errors.length > 0) {
         console.warn(`Filtered ${errors.length} invalid posts:`, errors);
       }
 
       const startIndex = (page - 1) * limit;
       const endIndex = startIndex + limit;
       const posts = validatedPosts.slice(startIndex, endIndex);
-      const total = validatedPosts?.length;
+      const total = validatedPosts.length;
 
-      return createPaginatedResponse(posts, total, page, limit);
+      const result = createPaginatedResponse(posts, total, page, limit);
+
+      await this.cacheManager.set(cacheKey, result, 60 * 1000);
+      console.log('Cache MISS → stored for', cacheKey);
+
+      return result;
     } catch (error) {
       if (error instanceof HttpException) throw error;
       throw new HttpException(
