@@ -1,18 +1,11 @@
 import { Module } from '@nestjs/common';
-import { CacheModule } from '@nestjs/cache-manager';
 import { PostsModule } from './posts/posts.module';
-import { redisStore } from 'cache-manager-redis-store';
+import { UsersModule } from './users/users.module';
+import { RedisModule } from './lib/redis/redis.module';
+import { HttpModule } from '@nestjs/axios';
 
 @Module({
-  imports: [
-    PostsModule,
-    CacheModule.register({
-      store: redisStore,
-      url: 'redis://localhost:6379',
-      ttl: 60 * 1000,
-      isGlobal: true,
-    }),
-  ],
+  imports: [PostsModule, UsersModule, RedisModule, HttpModule],
   controllers: [],
   providers: [],
 })
