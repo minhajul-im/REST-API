@@ -1,4 +1,4 @@
-import { HttpException, HttpStatus, Inject, Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import { firstValueFrom } from 'rxjs';
 import { plainToInstance } from 'class-transformer';
@@ -16,17 +16,12 @@ import {
   OperationResponseDtoWithoutData,
 } from 'src/common/dto/operation-response.dto';
 import { CreatePostDto, GetPostDto, UpdatePostDto } from './posts.dto';
-import { CACHE_MANAGER } from '@nestjs/cache-manager';
-import type { Cache } from 'cache-manager';
 
 @Injectable()
 export class PostsService {
   private readonly baseUrl = 'https://jsonplaceholder.typicode.com/posts';
 
-  constructor(
-    private readonly httpService: HttpService,
-    @Inject(CACHE_MANAGER) private cacheManager: Cache,
-  ) {}
+  constructor(private readonly httpService: HttpService) {}
 
   async create(
     createPostDto: CreatePostDto,
@@ -68,13 +63,6 @@ export class PostsService {
     limit: number,
   ): Promise<PaginatedResponseDto<GetPostDto>> {
     const cacheKey = `posts:page:${page}:limit:${limit}`;
-
-    const cached =
-      await this.cacheManager.get<PaginatedResponseDto<GetPostDto>>(cacheKey);
-    if (cached) {
-      console.log('Cache HIT for', cacheKey);
-      return cached;
-    }
 
     try {
       const { data } = await firstValueFrom(
@@ -124,9 +112,6 @@ export class PostsService {
       const total = validatedPosts.length;
 
       const result = createPaginatedResponse(posts, total, page, limit);
-
-      await this.cacheManager.set(cacheKey, result, 60 * 1000);
-      console.log('Cache MISS → stored for', cacheKey);
 
       return result;
     } catch (error) {
