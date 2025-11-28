@@ -27,8 +27,23 @@ export class UsersService {
   async findOne(id: number): Promise<UserDto> {
     const key = this.key(id);
     const cached = await this.redis.hgetall(key);
+    const nameField = await this.redis.hget(key, 'name');
 
-    console.log('checking cache');
+    const key_view = `views:user:${id}`;
+    const client = this.redis.getClient();
+
+    const views = await client.incr(key_view);
+    console.log({ views });
+    if (views === 1) {
+      await client.expire(key, 24 * 60 * 60);
+    }
+
+    console.log(`Product ${id} has ${views} views today`);
+
+    if (nameField) {
+      console.log('Cache MISS for', key);
+      console.log({ nameField });
+    }
 
     if (cached && Object.keys(cached).length > 0) {
       console.log('Cache HIT for', key);

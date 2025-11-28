@@ -24,6 +24,10 @@ export class RedisService implements OnModuleInit, OnModuleDestroy {
     return this.client.hgetall(key);
   }
 
+  hget(key: string, field: string) {
+    return this.client.hget(key, field);
+  }
+
   hset(key: string, data: Record<string, string | number>) {
     return this.client.hset(key, data);
   }
